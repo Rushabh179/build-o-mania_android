@@ -1,0 +1,56 @@
+package com.project.rushabh.buildomania;
+
+/**
+ * Created by Rushabh on 07-Oct-17.
+ */
+
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+
+public class NetworkStatus {
+    @SuppressLint("StaticFieldLeak")
+    static Context context;
+    @SuppressLint("StaticFieldLeak")
+    private static NetworkStatus instance = new NetworkStatus();
+    ConnectivityManager connectivityManager;
+    NetworkInfo wifiInfo, mobileInfo;
+    boolean connected = false;
+
+    public static NetworkStatus getInstance(Context ctx) {
+        context = ctx.getApplicationContext();
+        return instance;
+    }
+
+    public boolean isOnline() {
+        connectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        connected = (networkInfo != null && networkInfo.isConnectedOrConnecting());
+        return connected;
+    }
+
+    public AlertDialog.Builder buildDialog(final Context c) {
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(c);
+        builder.setTitle("No Internet Connection");
+        builder.setMessage("You need to have a working internet connection to access this application.\n\n" +
+                "Click on RETRY after connecting to the internet");
+        builder.setCancelable(false);
+
+        builder.setPositiveButton("Retry", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent myIntent = new Intent(c, Home.class);
+                c.startActivity(myIntent);
+            }
+        });
+        return builder;
+    }
+}
