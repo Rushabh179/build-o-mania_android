@@ -5,6 +5,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.neel.articleshubapi.restapi.beans.UserDetail;
+
 public class Home extends AppCompatActivity {
 
     @Override
@@ -18,6 +20,7 @@ public class Home extends AppCompatActivity {
     }
 
     public void rentButtonClicked(View view) {
+        startActivity(new Intent(this,LoginActivity.class));
     }
 
     public void sellButtonClicked(View view) {
