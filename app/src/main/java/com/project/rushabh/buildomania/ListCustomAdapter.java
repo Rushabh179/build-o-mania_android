@@ -15,9 +15,9 @@ import android.widget.TextView;
  * Created by Rushabh on 07-Oct-17.
  */
 
-public class BuyCustomAdapter  extends ArrayAdapter<String> {
+public class ListCustomAdapter extends ArrayAdapter<String> {
 
-    BuyCustomAdapter(@NonNull Context context, String[] names) {
+    ListCustomAdapter(@NonNull Context context, String[] names) {
         super(context, R.layout.buy_custom_row, names);
     }
 

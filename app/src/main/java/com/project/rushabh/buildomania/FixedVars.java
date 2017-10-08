@@ -18,7 +18,7 @@ class FixedVars {
     public static final String PREF_USER_PASSWORD = "password";
 
     //The base URL for server connection
-    public static final String BASE_URL = "https://articleshub.herokuapp.com/api";
+    public static final String BASE_URL = "https://build-o-mania.herokuapp.com";
 
     public static final String FONT_NAME = "ExoRegular.ttf";
 

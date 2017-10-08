@@ -1,6 +1,6 @@
 package com.project.rushabh.buildomania;
 
-import android.app.ProgressDialog;
+//import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -30,10 +30,10 @@ import org.springframework.http.HttpMethod;
 public class LoginActivity extends AppCompatActivity {
 
     public String token;
-    Button loginPageButton;
+    Button loginPageButton,registerButton;
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
-    ProgressDialog progressDialog;
+    //ProgressDialog progressDialog;
     /**
      * A dummy authentication store containing known user names and passwords.
      * private static final String[] DUMMY_CREDENTIALS = new String[]{
@@ -54,13 +54,11 @@ public class LoginActivity extends AppCompatActivity {
         if (NetworkStatus.getInstance(this).isOnline()) {
             setContentView(R.layout.activity_login);
 
-
             /*Calligrapher calligrapher = new Calligrapher(LoginPage.this);
             calligrapher.setFont(LoginPage.this, FixedVars.FONT_NAME, true);*/
 
             //Initializing ProgressDialog
             //progressDialog = new ProgressDialog(LoginPage.this);
-
 
             //Creating a SharedPreferences file
             sharedPref = getSharedPreferences(FixedVars.PREF_NAME, Context.MODE_PRIVATE);
@@ -92,6 +90,18 @@ public class LoginActivity extends AppCompatActivity {
                     userNameText.setError("");
                     passwordText.setError("");
                     attemptLogin();
+                }
+            });
+
+            registerButton = (Button) findViewById(R.id.btn_register_page);
+            registerButton.setOnClickListener(new OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    /*noTokenErrorText.setError(null);
+                    userNameText.setError("");
+                    passwordText.setError("");
+                    attemptLogin();*/
+                    startActivity(new Intent(LoginActivity.this,Register.class));
                 }
             });
         } else

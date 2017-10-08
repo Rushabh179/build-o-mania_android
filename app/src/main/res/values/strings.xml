@@ -19,4 +19,5 @@
     <string name="title_activity_sell">SellActivity</string>
     <string name="title_activity_register">Register</string>
     <string name="invalid_entries_error">Invalid entries</string>
+    <string name="title_activity_sell_list">SellList</string>
 </resources>
