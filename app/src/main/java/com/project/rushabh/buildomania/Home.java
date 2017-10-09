@@ -25,7 +25,7 @@ public class Home extends AppCompatActivity {
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
 
-    //UserDetail ud;
+    //UserDetail ud;/////
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,6 @@ public class Home extends AppCompatActivity {
                 startActivity(myIntent);
                 finish();
             } else {
-                //Toast.makeText(this, ud.getUserName(), Toast.LENGTH_SHORT).show();
                 CardView buyCardView, sellCardView, rentCardView;
                 buyCardView = (CardView) findViewById(R.id.buyCardView);
                 sellCardView = (CardView) findViewById(R.id.sellCardView);
@@ -96,7 +95,7 @@ public class Home extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_logout) {
+        if (id == R.id.action_profile) {
             /*RequestTask<String> logoutRequest = new RequestTask<String>(String.class, HttpMethod.DELETE,
                     new HeaderTools.EntryImp("token", token));
             logoutRequest.execute(FixedVars.BASE_URL + "/authentication/" + ud.getUserName());
@@ -107,6 +106,7 @@ public class Home extends AppCompatActivity {
             startActivity(myIntent);
             Toast.makeText(this, "You have successfully logged out!!!", Toast.LENGTH_SHORT).show();
             finish();*/
+            startActivity(new Intent(this,UserProfile.class));
             return true;
         }
         return super.onOptionsItemSelected(item);

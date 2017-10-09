@@ -3,8 +3,9 @@
       xmlns:tools="http://schemas.android.com/tools"
       tools:context="com.project.rushabh.buildomania.MainActivity">
     <item
-        android:id="@+id/action_logout"
-        android:orderInCategory="100"
-        android:title="Logout"
-        app:showAsAction="never"/>
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_person"
+        android:orderInCategory="1"
+        android:title="User Profile"
+        app:showAsAction="always"/>
 </menu>
