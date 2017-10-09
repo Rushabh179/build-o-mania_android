@@ -1,4 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                tools:context="com.project.rushabh.buildomania.UserProfile"
+                tools:showIn="@layout/activity_user_profile">
+
+    <TextView
+        android:id="@+id/text_profile_page_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Fname's Profile"
+        android:textAlignment="center"
+        android:textSize="35sp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/text_profile_page_heading"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:alignmentMode="alignBounds"
+        android:textAlignment="center">
+
+        <TextView
+            android:id="@+id/text_profile_page_uname_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="1"
+            android:text="User Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_uname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="1"
+            android:text="User Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_emailid_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:text="Email ID"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_emailid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="2"
+            android:text="Email ID"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userfname_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="3"
+            android:text="First Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userfname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="3"
+            android:text="First Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userlname_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="4"
+            android:text="Last Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userlname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="4"
+            android:text="Last Name"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userinfo_static"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="5"
+            android:text="Your Description"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/text_profile_page_userinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="5"
+            android:text="Your Description"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_edit_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginTop="35dp"
+            android:layout_row="6"
+            android:text="Edit your details"/>
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginTop="35dp"
+            android:layout_row="6"
+            android:text="Logout"/>
+
+
+    </GridLayout>
+
+
+</RelativeLayout>
+<!--
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -9,4 +195,4 @@
     tools:context="com.project.rushabh.buildomania.UserProfile"
     tools:showIn="@layout/activity_user_profile">
 
-</android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>-->

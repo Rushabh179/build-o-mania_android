@@ -96,16 +96,6 @@ public class Home extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_profile) {
-            /*RequestTask<String> logoutRequest = new RequestTask<String>(String.class, HttpMethod.DELETE,
-                    new HeaderTools.EntryImp("token", token));
-            logoutRequest.execute(FixedVars.BASE_URL + "/authentication/" + ud.getUserName());
-            editor.clear();
-            editor.apply();
-            //listSelected.clear();
-            Intent myIntent = new Intent(Home.this, LoginActivity.class);
-            startActivity(myIntent);
-            Toast.makeText(this, "You have successfully logged out!!!", Toast.LENGTH_SHORT).show();
-            finish();*/
             startActivity(new Intent(this,UserProfile.class));
             return true;
         }
