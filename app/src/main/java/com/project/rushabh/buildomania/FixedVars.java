@@ -21,7 +21,7 @@ class FixedVars {
     public static final String BASE_URL = "https://build-o-mania.herokuapp.com";
 
     //Temporary PHP server link
-    public static String link="http://192.168.1.36:8080/build-o-mania/";
+    public static String LINK="http://192.168.1.36:8080/build-o-mania/";
 
     public static final String FONT_NAME = "ExoRegular.ttf";
 

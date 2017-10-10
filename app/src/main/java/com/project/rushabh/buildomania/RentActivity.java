@@ -15,7 +15,12 @@ public class RentActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] rentList = {"3pac", "is the", "greatest"};
+        String[] rentList = new String[0];
+        try {
+            rentList = new BuyRentList().execute("rent").get().split("  ");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         ListView rentListView = (ListView) findViewById(R.id.rentListView);
         ListAdapter rentAdapter = new ListCustomAdapter(this, rentList);
         rentListView.setAdapter(rentAdapter);

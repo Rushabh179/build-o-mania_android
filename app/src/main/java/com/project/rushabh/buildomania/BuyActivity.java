@@ -15,10 +15,15 @@ public class BuyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] buyList = {"potato","tomato","salad"};
-        ListView buyListView = (ListView) findViewById(R.id.buyListView);
-        ListAdapter buyAdapter = new ListCustomAdapter(this, buyList);
-        buyListView.setAdapter(buyAdapter);
+        String[] buyList;
+        try {
+            buyList = new BuyRentList().execute("sell").get().split("  ");
+            ListView buyListView = (ListView) findViewById(R.id.buyListView);
+            ListAdapter buyAdapter = new ListCustomAdapter(this, buyList);
+            buyListView.setAdapter(buyAdapter);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }

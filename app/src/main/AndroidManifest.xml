@@ -35,9 +35,9 @@
             android:label="@string/title_activity_login">
         </activity>
         <activity
-            android:name=".SellActivity"
+            android:name=".SellInfo"
             android:label="@string/title_activity_sell"
-            android:parentActivityName=".SellList"
+            android:parentActivityName=".SellActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -53,7 +53,7 @@
                 android:value="com.project.rushabh.buildomania.LoginActivity"/>
         </activity>
         <activity
-            android:name=".SellList"
+            android:name=".SellActivity"
             android:label="@string/title_activity_sell_list"
             android:parentActivityName=".Home"
             android:theme="@style/AppTheme.NoActionBar">
