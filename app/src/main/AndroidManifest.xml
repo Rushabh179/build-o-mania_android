@@ -79,6 +79,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rushabh.buildomania.UserProfile"/>
         </activity>
+        <activity
+            android:name=".RentActivity"
+            android:label="@string/title_activity_rent"
+            android:parentActivityName=".Home"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.project.rushabh.buildomania.Home"/>
+        </activity>
     </application>
 
 </manifest>

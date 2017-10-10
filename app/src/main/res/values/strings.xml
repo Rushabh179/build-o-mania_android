@@ -30,4 +30,5 @@
     <string name="action_sign_up">Sign up</string>
     <string name="title_activity_user_profile">UserProfile</string>
     <string name="title_activity_edit_profile">EditProfile</string>
+    <string name="title_activity_rent">RentActivity</string>
 </resources>

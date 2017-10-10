@@ -6,19 +6,19 @@ import android.support.v7.widget.Toolbar;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-public class BuyActivity extends AppCompatActivity {
+public class RentActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_buy);
+        setContentView(R.layout.activity_rent);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] buyList = {"potato","tomato","salad"};
-        ListView buyListView = (ListView) findViewById(R.id.buyListView);
-        ListAdapter buyAdapter = new ListCustomAdapter(this, buyList);
-        buyListView.setAdapter(buyAdapter);
+        String[] rentList = {"3pac", "is the", "greatest"};
+        ListView rentListView = (ListView) findViewById(R.id.rentListView);
+        ListAdapter rentAdapter = new ListCustomAdapter(this, rentList);
+        rentListView.setAdapter(rentAdapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
