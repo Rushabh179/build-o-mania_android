@@ -18,7 +18,7 @@ public class SellActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String[] sellList = {"It's","everyday","bro"};
+        String[] sellList = {"Potato","Tomato","Salad"};
         ListView sellListView = (ListView) findViewById(R.id.sellListView);
         ListAdapter sellAdapter = new ListCustomAdapter(this, sellList);
         sellListView.setAdapter(sellAdapter);
