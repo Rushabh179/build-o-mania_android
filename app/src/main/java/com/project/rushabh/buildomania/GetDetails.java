@@ -10,19 +10,19 @@ import java.net.URLConnection;
 import java.net.URLEncoder;
 
 /**
- * Created by Rushabh on 10-Oct-17.
+ * Created by Rushabh on 11-Oct-17.
  */
 
-public class SellList extends AsyncTask<String, Void, String> {
+public class GetDetails extends AsyncTask<String, Void, String> {
     @Override
     protected String doInBackground(String... params) {
         try {
 
-            String username = params[0];
+            String title = params[0];
 
-            String link = FixedVars.LINK + "selllist.php";
+            String link = FixedVars.LINK + "getdetails.php";
 
-            String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
+            String data = URLEncoder.encode("title", "UTF-8") + "=" + URLEncoder.encode(title, "UTF-8");
 
             URL url = new URL(link);
             URLConnection conn = url.openConnection();

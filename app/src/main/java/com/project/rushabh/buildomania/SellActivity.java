@@ -8,12 +8,19 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class SellActivity extends AppCompatActivity {
 
     SharedPreferences sharedPref;
+
+    ListView sellListView;
+    ListAdapter sellAdapter;
+
+    String title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +35,21 @@ public class SellActivity extends AppCompatActivity {
         String[] sellList;
         try {
             sellList = new SellList().execute(username).get().split("  ");
-            ListView sellListView = (ListView) findViewById(R.id.sellListView);
-            ListAdapter sellAdapter = new ListCustomAdapter(this, sellList);
+            sellListView = (ListView) findViewById(R.id.sellListView);
+            sellAdapter = new ListCustomAdapter(this, sellList);
             sellListView.setAdapter(sellAdapter);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        sellListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                title = String.valueOf(parent.getItemAtPosition(position));
+                Toast.makeText(SellActivity.this,title,Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(SellActivity.this,HouseDetails.class).putExtra("title",title));
+            }
+        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
