@@ -31,4 +31,5 @@
     <string name="title_activity_user_profile">UserProfile</string>
     <string name="title_activity_edit_profile">EditProfile</string>
     <string name="title_activity_rent">RentActivity</string>
+    <string name="title_activity_house_details">HouseDetails</string>
 </resources>

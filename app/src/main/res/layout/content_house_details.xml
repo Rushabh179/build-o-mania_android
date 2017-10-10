@@ -5,33 +5,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                tools:context="com.project.rushabh.buildomania.UserProfile"
-                tools:showIn="@layout/activity_user_profile">
+                tools:context="com.project.rushabh.buildomania.HouseDetails"
+                tools:showIn="@layout/activity_house_details">
 
     <TextView
-        android:id="@+id/text_profile_page_heading"
+        android:id="@+id/titleTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="10dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        android:text="Fname's Profile"
+        android:text="Title"
         android:textAlignment="center"
-        android:textSize="35sp" />
+        android:textSize="35sp"/>
 
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/text_profile_page_heading"
+        android:layout_below="@+id/titleTv"
         android:layout_centerInParent="true"
         android:layout_marginStart="10dp"
         android:alignmentMode="alignBounds"
         android:textAlignment="center">
 
         <TextView
-            android:id="@+id/text_profile_page_uname_static"
+            android:id="@+id/descriptionTvStatic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -40,11 +40,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="1"
-            android:text="User Name"
-            android:textSize="20sp" />
+            android:text="Description:"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_uname"
+            android:id="@+id/descriptionTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -53,11 +53,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="1"
-            android:text="User Name"
-            android:textSize="20sp" />
+            android:text="description"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_emailid_static"
+            android:id="@+id/addressTvStatic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -66,11 +66,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="2"
-            android:text="Email ID"
-            android:textSize="20sp" />
+            android:text="Address:"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_emailid"
+            android:id="@+id/addressTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -79,11 +79,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="2"
-            android:text="Email ID"
-            android:textSize="20sp" />
+            android:text="address"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userfname_static"
+            android:id="@+id/priceTvStatic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -92,11 +92,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="3"
-            android:text="First Name"
-            android:textSize="20sp" />
+            android:text="Price:"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userfname"
+            android:id="@+id/priceTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -105,11 +105,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="3"
-            android:text="First Name"
-            android:textSize="20sp" />
+            android:text="price"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userlname_static"
+            android:id="@+id/categoryTvStatic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -118,11 +118,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="4"
-            android:text="Last Name"
-            android:textSize="20sp" />
+            android:text="Category:"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userlname"
+            android:id="@+id/categoryTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -131,11 +131,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="4"
-            android:text="Last Name"
-            android:textSize="20sp" />
+            android:text="category"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userinfo_static"
+            android:id="@+id/usernameTvStatic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="1"
@@ -144,11 +144,11 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="5"
-            android:text="Your Description"
-            android:textSize="20sp" />
+            android:text="Username:"
+            android:textSize="20sp"/>
 
         <TextView
-            android:id="@+id/text_profile_page_userinfo"
+            android:id="@+id/usernameTv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_column="2"
@@ -157,10 +157,62 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
             android:layout_row="5"
-            android:text="Your Description"
-            android:textSize="20sp" />
+            android:text="username"
+            android:textSize="20sp"/>
 
-        <Button
+        <TextView
+            android:id="@+id/emailTvStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="6"
+            android:text="Email:"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/emailTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="6"
+            android:text="email"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/phoneTvStatic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="7"
+            android:text="Phone:"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/phoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="7"
+            android:text="phone"
+            android:textSize="20sp"/>
+
+        <!--<Button
             android:id="@+id/btn_edit_detail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -176,10 +228,22 @@
             android:layout_column="2"
             android:layout_marginTop="35dp"
             android:layout_row="6"
-            android:text="Logout"/>
+            android:text="Logout"/>-->
 
 
     </GridLayout>
 
 
 </RelativeLayout>
+    <!--
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.project.rushabh.buildomania.HouseDetails"
+        tools:showIn="@layout/activity_house_details">
+
+    </android.support.constraint.ConstraintLayout>-->

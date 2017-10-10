@@ -88,6 +88,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.project.rushabh.buildomania.Home"/>
         </activity>
+        <activity
+            android:name=".HouseDetails"
+            android:label="@string/title_activity_house_details"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

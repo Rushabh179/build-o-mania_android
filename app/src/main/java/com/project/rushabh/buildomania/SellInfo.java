@@ -10,13 +10,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 public class SellInfo extends AppCompatActivity {
 
     SharedPreferences sharedPref;
-    SharedPreferences.Editor editor;
 
     private EditText titleEt;
     private EditText descriptionEt;
@@ -26,8 +24,6 @@ public class SellInfo extends AppCompatActivity {
     private EditText phoneEt;
 
     RadioGroup categoryRg;
-
-    private TextView noTokenErrorText;
 
     String title, description, address, price, category, username, email, phone;
 
