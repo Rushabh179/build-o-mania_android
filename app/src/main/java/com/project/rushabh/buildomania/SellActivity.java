@@ -21,6 +21,7 @@ public class SellActivity extends AppCompatActivity {
     ListAdapter sellAdapter;
 
     String title;
+    String[] sellList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,24 +33,27 @@ public class SellActivity extends AppCompatActivity {
         sharedPref = getSharedPreferences(FixedVars.PREF_NAME, Context.MODE_PRIVATE);
         String username = sharedPref.getString(FixedVars.PREF_USER_NAME, "");
 
-        String[] sellList;
         try {
             sellList = new SellList().execute(username).get().split("  ");
-            sellListView = (ListView) findViewById(R.id.sellListView);
-            sellAdapter = new ListCustomAdapter(this, sellList);
-            sellListView.setAdapter(sellAdapter);
+            if (!sellList[0].isEmpty()) {
+                sellListView = (ListView) findViewById(R.id.sellListView);
+                sellAdapter = new ListCustomAdapter(this, sellList);
+                sellListView.setAdapter(sellAdapter);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        sellListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                title = String.valueOf(parent.getItemAtPosition(position));
-                Toast.makeText(SellActivity.this,title,Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(SellActivity.this,HouseDetails.class).putExtra("title",title));
-            }
-        });
+        if (!sellList[0].isEmpty()) {
+            sellListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    title = String.valueOf(parent.getItemAtPosition(position));
+                    Toast.makeText(SellActivity.this, title, Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(SellActivity.this, HouseDetails.class).putExtra("title", title));
+                }
+            });
+        }
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {

@@ -7,7 +7,7 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
                 tools:context="com.project.rushabh.buildomania.HouseDetails"
                 tools:showIn="@layout/activity_house_details">
-    
+
     <TextView
         android:id="@+id/titleTv"
         android:layout_width="match_parent"
